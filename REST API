@@ -1,0 +1,13 @@
+1. Создать клиента - POST http://localhost/client
+        ответ - клиент в формате JSON.
+        Status Code - 201, если успешно.
+
+2. Удалить клиента - DELETE http://localhost/client/{card_number}
+3. Изменить клиента - PUT http://localhost/client/{card_number}
+4. Зарегистрировать визит - POST http://localhost/visit{card_number}
+        ответ - клиент в формате JSON. 
+        Status Code -   201, если успешно,
+                        403, если клиент пришёл не в своё время,
+                        404, если клиента нет в базе.
+        
+5. Получить список всех клиентов - GET http://localhost/client
