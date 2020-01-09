@@ -29,6 +29,7 @@ public class VisitServlet extends HttpServlet {
         } else {
             visitService.registerVisit(client);
             String jsonString = objectMapper.writeValueAsString(client);
+            httpServletResponse.setContentType("application/json; charset=utf-8");
             PrintWriter writer = httpServletResponse.getWriter();
             writer.write(jsonString);
         }
